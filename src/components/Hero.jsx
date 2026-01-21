@@ -15,6 +15,8 @@ const Hero = () => {
 
   return (
     <section id='hero'>
+      <div className="container-section">
+
         <div>
             <h1>MacBook Pro</h1>
             <img src="/title.png" alt="MacBook Title" />
@@ -26,6 +28,7 @@ const Hero = () => {
 
 
         <p>From $1599 or $133/mo for 12 months</p>
+      </div>
     </section>
   )
 }

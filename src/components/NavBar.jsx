@@ -4,7 +4,7 @@ import { navLinks } from '../constants'
 const NavBar = () => {
   return (
     <header>
-      <nav>
+      <nav className='container-section'>
         <img src='/logo.svg' alt='Apple logo' />
 
         <ul>
