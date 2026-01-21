@@ -141,7 +141,7 @@ body {
   }
 
   #product-viewer {
-    @apply max-w-[1440px] relative min-h-[93vh] mx-auto px-5 2xl:px-0 mt-40;
+    @apply container relative min-h-[93vh] mx-auto px-5 2xl:px-0 mt-40;
 
     h2 {
       @apply text-white font-semibold text-3xl lg:text-6xl;
@@ -191,7 +191,7 @@ body {
       }
 
       .mask {
-        @apply absolute h-full top-0 lg:-top-20 xl:top-0;
+        @apply absolute min-w-svw h-svw md:h-[80svw] lg:h-svw -top-[6%] md:-top-[12%] lg:-top-60 xl:-top-70 ;
 
         img {
           @apply h-full scale-150 lg:scale-100;
@@ -431,10 +431,3 @@ body {
     }
   }
 }
-
-
-.container-section {
- @apply  max-w-[1440px] mx-auto px-5 2xl:px-0;
- 
-}
-
