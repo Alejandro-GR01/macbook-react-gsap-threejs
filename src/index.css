@@ -112,6 +112,8 @@ body {
     }
   }
 
+  
+
   #hero {
     @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
 
@@ -176,7 +178,7 @@ body {
     }
 
     #canvas {
-      @apply !w-full !h-[80vh] lg:!h-dvh relative z-40;
+      @apply w-full! h-[80vh]! lg:h-dvh! relative z-40;
     }
   }
 
@@ -191,7 +193,7 @@ body {
       }
 
       .mask {
-        @apply absolute min-w-svw h-svw md:h-[80svw] lg:h-svw -top-[6%] md:-top-[12%] lg:-top-60 xl:-top-70 ;
+        @apply absolute min-w-svw h-svw  -top-[6%] md:h-svh md:-top-[20svh] lg:-top-[15svh] xl:top-0 ;
 
         img {
           @apply h-full scale-150 lg:scale-100;
@@ -207,7 +209,7 @@ body {
     }
 
     .content {
-      @apply relative z-10 my-5 lg:-mt-40 bg-black font-semibold text-xl text-dark-100 lg:opacity-0;
+      @apply relative z-10 my-5  lg:-mt-40 xl:-mt-10 2xl:-mt-[26svh] bg-black font-semibold text-xl text-dark-100 lg:opacity-0;
 
       .wrapper {
         @apply container mx-auto px-5 pb-20 2xl:px-0 flex flex-col lg:flex-row justify-center gap-20;
@@ -231,10 +233,10 @@ body {
     }
 
     .wrapper {
-      @apply w-7xl 2xl:w-[100rem] h-[50vh] lg:h-screen relative;
+      @apply w-7xl 2xl:w-400 h-[50vh] lg:h-screen relative;
 
       img {
-        @apply max-w-40 lg:max-w-[27rem] 2xl:max-w-[35rem] object-cover object-center;
+        @apply max-w-40 lg:max-w-108 2xl:max-w-140 object-cover object-center;
       }
 
       .p1 {
