@@ -37,51 +37,51 @@ const ModelScroll = () => {
   }, []);
 
 
-  useGSAP(()=> {
+  useGSAP(() => {
     //3D Model rotation animation
     const modelTimeline = gsap.timeline({
       scrollTrigger: {
-        trigger:'#f-canvas',
+        trigger: '#f-canvas',
         start: 'top top',
         end: 'bottom top',
         scrub: 1,
         pin: true,
-        }
+      }
     })
-    
+
     //sync the Feature content
     const timeline = gsap.timeline({
-       scrollTrigger: {
-        trigger:'#f-canvas',
+      scrollTrigger: {
+        trigger: '#f-canvas',
         start: 'top center',
         end: 'bottom top',
         scrub: 1,
-        }
+      }
     })
-    
+
 
     //3d spin
-    if(groupRef.current){
-      modelTimeline.to(groupRef.current.rotation, {y:Math.PI * 2, ease: 'power1.inOut'})
+    if (groupRef.current) {
+      modelTimeline.to(groupRef.current.rotation, { y: Math.PI * 2, ease: 'power1.inOut' })
     }
 
     // content y texture Sync
     timeline
-    .call(()=> setTexture('/videos/feature-1.mp4'))
-      .to('.box1', {opacity:1, y: 0, delay: 1})
-      .call(()=>setTexture('/videos/feature-1.mp4'))
+      .call(() => setTexture('/videos/feature-1.mp4'))
+      .to('.box1', { opacity: 1, y: 0, delay: 1 })
+      .call(() => setTexture('/videos/feature-1.mp4'))
 
-      .call(()=> setTexture('/videos/feature-2.mp4'))
-      .to('.box2', {opacity:1, y: 0})
+      .call(() => setTexture('/videos/feature-2.mp4'))
+      .to('.box2', { opacity: 1, y: 0 })
 
-      .call(()=> setTexture('/videos/feature-3.mp4'))
-      .to('.box3', {opacity:1, y: 0})
+      .call(() => setTexture('/videos/feature-3.mp4'))
+      .to('.box3', { opacity: 1, y: 0 })
 
-      .call(()=> setTexture('/videos/feature-4.mp4'))
-      .to('.box4', {opacity:1, y: 0})
+      .call(() => setTexture('/videos/feature-4.mp4'))
+      .to('.box4', { opacity: 1, y: 0 })
 
-      .call(()=> setTexture('/videos/feature-5.mp4'))
-      .to('.box5', {opacity:1, y: 0})
+      .call(() => setTexture('/videos/feature-5.mp4'))
+      .to('.box5', { opacity: 1, y: 0 })
   }, [])
 
 

@@ -30,7 +30,7 @@ const Performance = () => {
             }
         );
 
-        
+
         if (isMobile) return;
         const tl = gsap.timeline({
             defaults: { ease: "power1.inOut", duration: 2, overwrite: "auto" },
@@ -45,27 +45,27 @@ const Performance = () => {
         //Prepare images and animate to their final position from constants at time 0
         performanceImgPositions.forEach((pos) => {
             if (pos.id === 'p5') return;
-          
 
-            const toVars = { };
 
-            if (pos.left !== undefined) toVars.left = `${ pos.left}%`;
-            if (pos.right !== undefined) toVars.right = `${ pos.right}%`;
+            const toVars = {};
+
+            if (pos.left !== undefined) toVars.left = `${pos.left}%`;
+            if (pos.right !== undefined) toVars.right = `${pos.right}%`;
             if (pos.bottom !== undefined) toVars.bottom = `${pos.bottom}%`;
             if (pos.transform !== undefined) toVars.transform = pos.transform;
 
             tl.to(`.${pos.id}`, toVars, 0);
 
         });
-    },{scope: sectionRef, dependencies: [isMobile]});
+    }, { scope: sectionRef, dependencies: [isMobile] });
 
     return (
         <section ref={sectionRef} id="performance">
             <h2>Next-level graphics performance. Game on.</h2>
 
             <div className="wrapper">
-                {performanceImages.map(({ id, src }) => (
-                    <img className={id} key={id} src={src} alt={id} />
+                {performanceImages.map(({ id, src }, index) => (
+                    <img className={id} key={id} src={src} alt={id || `Performance Image #${index + 1}`} />
                 ))}
             </div>
 
