@@ -21,7 +21,7 @@ const Hero = () => {
           <h1>MacBook Pro</h1>
           <picture>
             <source srcSet="/title.avif" type="image/avif" />
-            <img src="/title.png" alt="MacBook Title" />
+            <img src="/title.png" alt="MacBook Title" loading="eager" />
           </picture>
        
         </div>

@@ -32,7 +32,7 @@ const Highlights = () => {
           <div>
             <picture>
               <source srcSet="/laptop.avif" type="image/avif" />
-              <img src="/laptop.png" alt="Laptop" />
+              <img src="/laptop.png" alt="Laptop" loading="lazy" />
              </picture>
           
            
@@ -41,7 +41,7 @@ const Highlights = () => {
           <div>
             <picture>
             <source srcSet="/sun.avif" type="image/avif" />
-            <img src="/sun.png" alt="Sun" />
+            <img src="/sun.png" alt="Sun" loading="lazy" />
             </picture>
             <p>A stunning  <br />
               Liquid Retina XDR <br />
@@ -53,7 +53,7 @@ const Highlights = () => {
           <div className="apple-gradient">
             <picture>
               <source srcSet="/ai.avif" type="image/avif" />
-            <img src="/ai.png" alt="AI" />
+            <img src="/ai.png" alt="AI" loading="lazy" />
             </picture>
             <p>Built for <br />
               <span>Apple Intelligence.</span></p>
@@ -61,7 +61,7 @@ const Highlights = () => {
           <div>
             <picture>
             <source srcSet="/battery.avif" type="image/avif" />
-            <img src="/battery.png" alt="Battery" />
+            <img src="/battery.png" alt="Battery" loading="lazy" />
             </picture>
             <p>Up to <span className="green-gradient">14 more hours</span>
               {" "}baterry life. <br />

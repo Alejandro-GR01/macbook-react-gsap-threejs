@@ -67,7 +67,7 @@ const Performance = () => {
                 {performanceImages.map(({ id, src }, index) => (
                     <picture key={id}>
                         <source srcSet={performanceImages.find(img => img.id === id)?.srcAvif} type="image/avif" />
-                        <img className={id} src={src} alt={id || `Performance Image #${index + 1}`} />
+                        <img className={id} src={src} alt={id || `Performance Image #${index + 1}`} loading="lazy" />
                     </picture>
                 
                 ))}
