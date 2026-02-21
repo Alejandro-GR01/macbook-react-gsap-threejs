@@ -30,11 +30,19 @@ const Highlights = () => {
       <div className="masonry">
         <div className="left-column">
           <div>
-            <img src="/laptop.png" alt="Laptop" />
+            <picture>
+              <source srcSet="/laptop.avif" type="image/avif" />
+              <img src="/laptop.png" alt="Laptop" />
+             </picture>
+          
+           
             <p>Fly through demanding tasks up to 9.8x faster.</p>
           </div>
           <div>
+            <picture>
+            <source srcSet="/sun.avif" type="image/avif" />
             <img src="/sun.png" alt="Sun" />
+            </picture>
             <p>A stunning  <br />
               Liquid Retina XDR <br />
               display.
@@ -43,12 +51,18 @@ const Highlights = () => {
         </div>
         <div className="right-column">
           <div className="apple-gradient">
+            <picture>
+              <source srcSet="/ai.avif" type="image/avif" />
             <img src="/ai.png" alt="AI" />
+            </picture>
             <p>Built for <br />
               <span>Apple Intelligence.</span></p>
           </div>
           <div>
+            <picture>
+            <source srcSet="/battery.avif" type="image/avif" />
             <img src="/battery.png" alt="Battery" />
+            </picture>
             <p>Up to <span className="green-gradient">14 more hours</span>
               {" "}baterry life. <br />
               <span className="text-dark-100">{" "}(Up to 24 hours total) </span>

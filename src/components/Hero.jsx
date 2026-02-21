@@ -19,7 +19,11 @@ const Hero = () => {
 
         <div>
           <h1>MacBook Pro</h1>
-          <img src="/title.png" alt="MacBook Title" />
+          <picture>
+            <source srcSet="/title.avif" type="image/avif" />
+            <img src="/title.png" alt="MacBook Title" />
+          </picture>
+       
         </div>
 
         <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline></video>
