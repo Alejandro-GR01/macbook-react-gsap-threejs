@@ -13,14 +13,14 @@ Una landing page premium e interactiva para **MacBook Pro**, desarrollada con te
 
 ## 🌍 Live Demo
 
-👉 https://macbook-pro-m4.netlify.app/ 
-*(Reemplaza con tu URL real)*
+👉 Visita el sitio en vivo: **[https://macbook-pro-m4.netlify.app/ ](https://macbook-pro-m4.netlify.app/ )**
+
 
 ---
 
 ## 📸 Preview
 
-<img src="./public/preview.png" width="100%" alt="MacBook Landing Preview"/>
+<img src="./public/macbook-app_preview.png" width="100%" alt="MacBook Landing Preview"/>
 
 ---
 
