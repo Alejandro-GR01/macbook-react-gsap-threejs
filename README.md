@@ -20,7 +20,7 @@ Una landing page premium e interactiva para **MacBook Pro**, desarrollada con te
 
 ## 📸 Preview
 
-<img src="./public/macbook-app_preview.png" width="100%" alt="MacBook Landing Preview"/>
+<img src="./public/macbook-app_preview.jpg" width="100%" alt="MacBook Landing Preview"/>
 
 ---
 
