@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive"
+import { images } from "../utils/paths"
 
 
 const Highlights = () => {
@@ -31,17 +32,17 @@ const Highlights = () => {
         <div className="left-column">
           <div>
             <picture>
-              <source srcSet="/laptop.avif" type="image/avif" />
-              <img src="/laptop.png" alt="Laptop" loading="lazy" />
+              <source srcSet={images.laptop.replace('.png', '.avif')} type="image/avif" />
+              <img src={images.laptop} alt="Laptop" loading="lazy" />
              </picture>
-          
            
+            
             <p>Fly through demanding tasks up to 9.8x faster.</p>
           </div>
           <div>
             <picture>
-            <source srcSet="/sun.avif" type="image/avif" />
-            <img src="/sun.png" alt="Sun" loading="lazy" />
+            <source srcSet={images.sun.replace('.png', '.avif')} type="image/avif" />
+            <img src={images.sun} alt="Sun" loading="lazy" />
             </picture>
             <p>A stunning  <br />
               Liquid Retina XDR <br />
@@ -52,16 +53,16 @@ const Highlights = () => {
         <div className="right-column">
           <div className="apple-gradient">
             <picture>
-              <source srcSet="/ai.avif" type="image/avif" />
-            <img src="/ai.png" alt="AI" loading="lazy" />
+              <source srcSet={images.ai.replace('.png', '.avif')} type="image/avif" />
+            <img src={images.ai} alt="AI" loading="lazy" />
             </picture>
             <p>Built for <br />
               <span>Apple Intelligence.</span></p>
           </div>
           <div>
             <picture>
-            <source srcSet="/battery.avif" type="image/avif" />
-            <img src="/battery.png" alt="Battery" loading="lazy" />
+            <source srcSet={images.battery.replace('.png', '.avif')} type="image/avif" />
+            <img src={images.battery} alt="Battery" loading="lazy" />
             </picture>
             <p>Up to <span className="green-gradient">14 more hours</span>
               {" "}baterry life. <br />

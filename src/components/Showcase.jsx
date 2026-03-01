@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { useMediaQuery } from "react-responsive"
 
+import { images, videos } from "../utils/paths"
+
 
 const Showcase = () => {
 
@@ -28,9 +30,9 @@ const Showcase = () => {
     return (
         <section id="showcase">
             <div className="media">
-                <video src="/videos/game.mp4" loop muted autoPlay playsInline />
+                <video src={videos.game} loop muted autoPlay playsInline />
                 <div className="mask">
-                    <img src="/mask-logo.svg" loading="lazy" />
+                    <img src={images.maskLogo} loading="lazy" />
                 </div>
 
                 <div className="content">

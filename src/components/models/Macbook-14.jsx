@@ -13,21 +13,19 @@ import { useGLTF, useTexture } from '@react-three/drei'
 import useMacbookStore from '../../store';
 import { useEffect } from 'react';
 import { noChangeParts } from '../../constants';
-import { Color, SRGBColorSpace } from 'three';
-
-// import {noChangeParts} from "../../constants/index.js";
-// import {Color, SRGBColorSpace} from 'three'
+import { Color } from 'three';
+import { models, textures } from '../../utils/paths';
 
 export default function MacbookModel14(props) {
 
   const { color } = useMacbookStore();
-  const { nodes, materials, scene } = useGLTF('/models/macbook-14-transformed.glb');
+  const { nodes, materials, scene } = useGLTF(models.macbook14);
 
 
 
-  const texture = useTexture('/screen.png');
-  texture.colorSpace = SRGBColorSpace;
-  texture.needsUpdate = true;
+  const texture = useTexture(textures.screen);
+  // texture.colorSpace = SRGBColorSpace;
+  // texture.needsUpdate = true;
 
 
   useEffect(() => {
@@ -69,4 +67,4 @@ export default function MacbookModel14(props) {
   )
 }
 
-useGLTF.preload('/models/macbook-14-transformed.glb')
+useGLTF.preload(models.macbook14)

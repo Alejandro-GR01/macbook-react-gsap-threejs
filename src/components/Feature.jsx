@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import StudioLights from "./three/StudioLights"
 import { features, featureSequence } from "../constants"
+import { videos } from "../utils/paths"
 import clsx from "clsx"
 import { useRef } from "react"
 import { Suspense } from "react"
@@ -67,20 +68,20 @@ const ModelScroll = () => {
 
     // content y texture Sync
     timeline
-      .call(() => setTexture('/videos/feature-1.mp4'))
+      .call(() => setTexture(videos.feature1))
       .to('.box1', { opacity: 1, y: 0, delay: 1 })
-      .call(() => setTexture('/videos/feature-1.mp4'))
+      .call(() => setTexture(videos.feature1))
 
-      .call(() => setTexture('/videos/feature-2.mp4'))
+      .call(() => setTexture(videos.feature2))
       .to('.box2', { opacity: 1, y: 0 })
 
-      .call(() => setTexture('/videos/feature-3.mp4'))
+      .call(() => setTexture(videos.feature3))
       .to('.box3', { opacity: 1, y: 0 })
 
-      .call(() => setTexture('/videos/feature-4.mp4'))
+      .call(() => setTexture(videos.feature4))
       .to('.box4', { opacity: 1, y: 0 })
 
-      .call(() => setTexture('/videos/feature-5.mp4'))
+      .call(() => setTexture(videos.feature5))
       .to('.box5', { opacity: 1, y: 0 })
   }, [])
 

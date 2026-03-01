@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useRef } from "react"
+import { images, videos } from "../utils/paths"
 
 
 const Hero = () => {
@@ -20,13 +21,13 @@ const Hero = () => {
         <div>
           <h1>MacBook Pro</h1>
           <picture>
-            <source srcSet="/title.avif" type="image/avif" />
-            <img src="/title.png" alt="MacBook Title" loading="eager" />
+            <source srcSet={images.titleAvif} type="image/avif" />
+            <img src={images.title} alt="MacBook Title" loading="eager" />
           </picture>
-       
+        
         </div>
 
-        <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline></video>
+        <video ref={videoRef} src={videos.hero} autoPlay muted playsInline></video>
 
         <button>Buy</button>
 

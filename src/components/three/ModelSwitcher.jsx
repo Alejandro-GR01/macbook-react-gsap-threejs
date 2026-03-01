@@ -1,21 +1,21 @@
 //14 and 16 ->  Presentacion Controls
 
-import {  PresentationControls } from "@react-three/drei";
-import {  useRef } from "react"
+import { PresentationControls } from "@react-three/drei";
+import { lazy, Suspense, useState, useEffect, useRef } from "react"
 import MacbookModel16 from "../models/Macbook-16";
 import MacbookModel14 from "../models/Macbook-14";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-const ANIMATION_DURATION = 1;
-const OFFSET_DISTANCE = 10;
+const ANIMATION_DURATION = 0.8;
+const OFFSET_DISTANCE = 8;
 
 const fadeMeshes = (group, opacity) => {
     if (!group) return;
 
     group.traverse((child) => {
-        if (child.isMesh) {
+        if (child.isMesh && child.material) {
             child.material.transparent = true;
             gsap.to(child.material, { opacity, duration: ANIMATION_DURATION })
         }
@@ -25,7 +25,7 @@ const fadeMeshes = (group, opacity) => {
 const moveGroup = (group, x) => {
     if (!group) return;
 
-    gsap.to(group.position, { x, duration: ANIMATION_DURATION })
+    gsap.to(group.position, { x, duration: ANIMATION_DURATION, ease: "power2.out" })
 
 }
 
@@ -37,11 +37,19 @@ const ModelSwitcher = ({ scale, isMobile }) => {
     const smallMacbookRef = useRef();
     const largeMacbookRef = useRef()
 
-
     const showLargeMacbook = scale === SCALE_LARGE_DESKTOP || scale === SCALE_LARGE_MOBILE;
+    
+    const activeModel = showLargeMacbook ? 'large' : 'small';
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
 
     useGSAP(() => {
+        if (!mounted) return;
+        
         if (showLargeMacbook) {
             moveGroup(smallMacbookRef.current, -OFFSET_DISTANCE,);
             moveGroup(largeMacbookRef.current, 0);
@@ -57,7 +65,7 @@ const ModelSwitcher = ({ scale, isMobile }) => {
             fadeMeshes(largeMacbookRef.current, 0);
         }
 
-    }, [scale])
+    }, [scale, mounted, showLargeMacbook])
 
 
     //snap vuelve al centro cunado sueltas
@@ -65,7 +73,6 @@ const ModelSwitcher = ({ scale, isMobile }) => {
         snap: true,
         speed: 1,
         zoom: 1,
-        // polar: [-Math.PI, Math.PI], //polar indica que puedes ver el fondo y la tapa 
         azimut: [-Infinity, Infinity],
         config: { mass: 1, tension: 0, friccion: 26 }
 
@@ -75,7 +82,7 @@ const ModelSwitcher = ({ scale, isMobile }) => {
         <>
             <PresentationControls {...controlsConfig}>
                 <group ref={largeMacbookRef}>
-                     <MacbookModel16 scale={isMobile ? 0.05 : 0.08} />
+                    <MacbookModel16 scale={isMobile ? 0.05 : 0.08} />
                 </group>
             </PresentationControls>
             <PresentationControls {...controlsConfig}>

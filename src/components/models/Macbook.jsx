@@ -13,10 +13,11 @@ import { useGLTF, useVideoTexture } from '@react-three/drei'
 import useMacbookStore from "../../store/index.js";
 import { noChangeParts } from "../../constants/index.js";
 import { Color } from "three";
+import { models } from "../../utils/paths";
 
 export default function MacbookModel(props) {
   const { color, texture, } = useMacbookStore();
-  const { nodes, materials, scene } = useGLTF('/models/macbook-transformed.glb')
+  const { nodes, materials, scene } = useGLTF(models.macbook)
 
   const screen = useVideoTexture(texture)
 
@@ -57,4 +58,4 @@ export default function MacbookModel(props) {
   )
 }
 
-useGLTF.preload('/models/macbook-transformed.glb')
+useGLTF.preload(models.macbook)

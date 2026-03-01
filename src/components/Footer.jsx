@@ -1,4 +1,5 @@
 import { footerLinks } from "../constants"
+import { images } from "../utils/paths"
 
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
     <footer>
       <div className="info">
         <p>More ways tho shop: Find an Apple Store or other retailer near you. Our call 000800 040 1966</p>
-        <img src="/logo.svg" alt="Apple logo " loading="lazy" />
+        <img src={images.logo} alt="Apple logo " loading="lazy" />
       </div>
       <hr/>
 

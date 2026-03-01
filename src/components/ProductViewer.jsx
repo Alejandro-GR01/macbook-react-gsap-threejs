@@ -1,13 +1,24 @@
 import clsx from "clsx";
 import useMacbookStore from "../store";
 import { Canvas } from "@react-three/fiber";
-import { Box, Circle, OrbitControls } from "@react-three/drei";
+import { Html } from "@react-three/drei";
+import { Suspense } from "react";
 import MacbookModel14 from "./models/Macbook-14";
-// import MacbookModel16 from "./models/Macbook-16";
 
 import StudioLights from "./three/StudioLights";
 import ModelSwitcher from './three/ModelSwitcher'
 import { useMediaQuery } from "react-responsive";
+
+function ModelLoader() {
+  return (
+    <Html center>
+      <div className="flex flex-col items-center justify-center">
+        <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+        <p className="mt-4 text-white text-sm">Loading 3D Model...</p>
+      </div>
+    </Html>
+  );
+}
 
 const ProductViewer = () => {
     const { color, scale, setColor, setScale } = useMacbookStore();
@@ -59,15 +70,12 @@ const ProductViewer = () => {
 
             </div>
 
-            <Canvas id="canvas" camera={{ position: [0, 3, 5], fov: 50, near: 0.1, far: 100 }}> 
+<Canvas id="canvas" camera={{ position: [0, 3, 5], fov: 50, near: 0.1, far: 100 }}> 
                 <StudioLights />
 
-
-                {/* <MacbookModel14 scale={0.06} position={[0, 0 , 0]}/> */}
-
-                {/* <OrbitControls enableZoom={false} /> */}
-
-                <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile} />
+                <Suspense fallback={<ModelLoader />}>
+                  <ModelSwitcher scale={isMobile ? scale - 0.03 : scale} isMobile={isMobile} />
+                </Suspense>
             </Canvas>
         </section>
     );
