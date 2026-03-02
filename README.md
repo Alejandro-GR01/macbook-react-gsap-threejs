@@ -13,7 +13,7 @@ Una landing page premium e interactiva para **MacBook Pro**, desarrollada con te
 
 ## 🌍 Live Demo
 
-👉 Visita el sitio en vivo: **[https://macbook-pro-m4.netlify.app/ ](https://macbook-pro-m4.netlify.app/ )**
+👉 Visita el sitio en vivo: **[https://alejandro-gr01.github.io/macbook-react-gsap-threejs/ ](https://alejandro-gr01.github.io/macbook-react-gsap-threejs/)**
 
 
 ---
