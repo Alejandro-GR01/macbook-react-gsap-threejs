@@ -7,7 +7,9 @@
 ![GSAP](https://img.shields.io/badge/GSAP-3-88CE02?logo=greensock&logoColor=black)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-Una landing page premium e interactiva para **MacBook Pro**, desarrollada con tecnologías modernas enfocadas en **visualización 3D**, **animaciones avanzadas** y **rendimiento optimizado**.
+Una landing page interactiva de producto que presenta el **MacBook** mediante visualización **3D** inmersiva y animaciones fluidas. El proyecto se enfoca en crear una experiencia de usuario atractiva combinando diseño de interfaz moderno con renderizado 3D en tiempo real y efectos de movimiento.
+
+Construida con **React**, **Three.js** y **GSAP** , la aplicación destaca las características del producto a través de interacciones dinámicas, layouts responsive y transiciones visuales optimizadas para diferentes tamaños de pantalla.
 
 ---
 
