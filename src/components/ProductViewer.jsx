@@ -14,7 +14,7 @@ function ModelLoader() {
     <Html center>
       <div className="flex flex-col items-center justify-center">
         <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
-        <p className="mt-4 text-white text-sm">Loading 3D Model...</p>
+        <p className="mt-4 text-white text-sm text-nowrap">Loading 3D Model...</p>
       </div>
     </Html>
   );
